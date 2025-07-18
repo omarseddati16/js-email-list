@@ -8,7 +8,7 @@ const apiUrl = 'https://flynn.boolean.careers/exercises/api/random/mail'
 const emails = []
 for (let i = 0; i < 10; i++) {
   axios.get(apiUrl).then(function (resp) {
-    emails.push(resp.data.response);
-    console.log(email)
+    console.log(emails);
+    email.innerHTML += `<li>${resp.data.response}</li>`;
   });
 }
